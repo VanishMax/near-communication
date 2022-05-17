@@ -8,6 +8,8 @@ import { Buffer as BufferPolyfill } from 'buffer'
 declare var Buffer: typeof BufferPolyfill;
 // @ts-ignore
 globalThis.Buffer = BufferPolyfill
+// @ts-ignore
+globalThis.process = { env: import.meta.env };
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
